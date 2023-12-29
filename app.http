@@ -1,0 +1,50 @@
+//API 1
+###
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+GET http://localhost:3000/todos/?priority=HIG
+###
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+GET http://localhost:3000/todos/?search_q=Buy
+###
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+###
+GET http://localhost:3000/todos/?category=HOME
+###
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+//API 2
+###
+GET http://localhost:3000/todos/5/
+
+//API 3
+###
+GET http://localhost:3000/agenda/?date=2021-04-04
+
+//API 4
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 5,
+  "todo": "Learn Node JS",
+  "priority": "HIGH",
+  "status": "IN PROGRESS",
+  "category": "LEARNING",
+  "dueDate": "2021-04-04"
+}
+//API 5
+###
+PUT http://localhost:3000/todos/5/
+Content-Type: application/json
+
+  {
+      "status": "DONE"
+  }
+
+//API 6
+###
+DELETE http://localhost:3000/todos/4/
+
